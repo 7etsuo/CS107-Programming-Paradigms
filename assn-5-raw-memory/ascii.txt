@@ -1,0 +1,36 @@
+Below, the file contains the chars 30 to 255 in order, 10 per line.
+If you want to know what character 65 is, go down to row 6, using
+markers on left side of table, then across to column 5 using the
+markers along the top of table. You'll find 'A' there.
+Although the charcters 0-127 are standardized in the ASCII set,
+the extended ASCII set from 128 to 255 is not so widely agreed upon.
+View this same file under a few systems (Mac, UNIX, Windows, etc.) to
+see what I mean. Edit this file with emacs to see how it represents
+extended chars using octal if you're curious.
+
+
+       0  1  2  3  4  5  6  7  8  9 
+   ---------------------------------
+ 3 |          !  "  #  $  %  &  '  
+ 4 |   (  )  *  +  ,  -  .  /  0  1  
+ 5 |   2  3  4  5  6  7  8  9  :  ;  
+ 6 |   <  =  >  ?  @  A  B  C  D  E  
+ 7 |   F  G  H  I  J  K  L  M  N  O  
+ 8 |   P  Q  R  S  T  U  V  W  X  Y  
+ 9 |   Z  [  \  ]  ^  _  `  a  b  c  
+10 |   d  e  f  g  h  i  j  k  l  m  
+11 |   n  o  p  q  r  s  t  u  v  w  
+12 |   x  y  z  {  |  }  ~    €    
+13 |   ‚  ƒ  „  …  †  ‡  ˆ  ‰  Š  ‹  
+14 |   Œ          ‘  ’  “  ”  •  
+15 |   –  —  ˜  ™  š  ›  œ      Ÿ  
+16 |      ¡  ¢  £  ¤  ¥  ¦  §  ¨  ©  
+17 |   ª  «  ¬  ­  ®  ¯  °  ±  ²  ³  
+18 |   ´  µ  ¶  ·  ¸  ¹  º  »  ¼  ½  
+19 |   ¾  ¿  À  Á  Â  Ã  Ä  Å  Æ  Ç  
+20 |   È  É  Ê  Ë  Ì  Í  Î  Ï  Ğ  Ñ  
+21 |   Ò  Ó  Ô  Õ  Ö  ×  Ø  Ù  Ú  Û  
+22 |   Ü  İ  Ş  ß  à  á  â  ã  ä  å  
+23 |   æ  ç  è  é  ê  ë  ì  í  î  ï  
+24 |   ğ  ñ  ò  ó  ô  õ  ö  ÷  ø  ù  
+25 |   ú  û  ü  ı  ş  ÿ  

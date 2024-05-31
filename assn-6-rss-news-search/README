@@ -1,0 +1,131 @@
+The version of the Assignment 4 solution you have here uses an 
+open source XML parser called expat.  For more information, you
+can visit expat.sourceforge.net.  Since my decision to go with
+expat will impact your ability to fully understand my solution,
+I thought I'd outline exactly what the expat parser does.
+
+The expat parser is a more sophisticated version of the streamtokenizer
+used by other portions of the code base.  expat's parser is stream-based,
+which means it reads the XML document character by character.  Every time
+the expat parser reads a start tag (something like <html>, <item>, or <link>),
+it fires off a callback to some function we specify.  Every time the parser
+encounters an end tag (as with </html>, </item>, or </link>), it calls the
+function previously registered as the routine that should be invoked whenever
+an end tag is encountered.  Let's stop there and illustrate how the expat
+functions work.  Here is the simplest program I can think of to illustrate
+how the expat XML parser works.
+
+void parseXMLDocument(urlconnection *urlconn)
+{
+	int numStartTags = 0;
+	XML_Parser parser = XML_ParserCreate(NULL); // NULL means use default encoding
+	XML_SetUserData(parser, &numStartTags);
+	XML_SetElementHandler(parser, ProcessStartTag, ProcessEndTag)
+
+	streamtokenizer st;
+	char buffer[2048]; 
+	STNew(&st, urlconn->dataStream, "\n", false);
+  	while (STNextToken(&st, buffer, sizeof(buffer))) {
+    	XML_Parse(parse, buffer, strlen(buffer), false);
+  	}
+  	STDispose(&st);
+	
+	XML_Parse(parser, "", 0, true); // true means we've detected EOF
+	XML_ParserFree(parser);
+	printf("There were a total of %d start tags.\n", numStartTags);
+}
+
+void ProcessStartTag(void *userData, const char *name, 
+					 const char **attributes)
+{
+	int *numStartTags = userData;	// re-discover what was set up as client data
+	(*numStartTags)++;				// update int
+	printf("Just detected a start tag: %s\n", name);
+}
+
+void ProcessEndTag(void *userData, const char *name)
+{
+	printf("Just detected an end tag: %s\n", name);	
+}
+
+If the urlconnection passed to parseXMLDocument is attached 
+to the following XML-like fragment:
+
+	<a>
+		<b>
+			<c>some data</c>
+			<d>more data</d>
+		</b>
+		<f>
+			<g>even more data</g>
+		</f>
+	</a>
+	
+We'd expect it to print the following on behalf of the fragment:
+
+Just detected a start tag: a
+Just detected a start tag: b
+Just detected a start tag: c
+Just detected an end tag: c
+Just detected a start tag: d
+Just detected an end tag: d
+Just detected an end tag: b
+Just detected a start tag: f
+Just detected a start tag: g
+Just detected an end tag: g
+Just detected an end tag: f
+Just detected an end tag: a
+There were a total of 6 start tags.
+
+My guess is that XML_ParserCreate, XML_Parse, and XML_ParserFree
+are self-explanatory.  The XML_Parser is an abstract data type
+whose concrete type is kept secret by the implementation.  Our 
+variable called "parser" is just a pointer in disguise, and that
+pointer is passed around and shared with all of the other function 
+calls so it's clear which parser we're dealing with.
+
+XML_SetUserData is called to establish what variable should be
+passes as client data to all of the callback functions.  In the
+sample code above, we share the local of a master integer counter
+so that both ProcessStartTag and ProcessEndTag have access to it.
+In particular, the exact value that gets passed to XML_SetUserData
+is passed as the first argument to the start and end-element callback
+routines.
+
+XML_SetElementHandler establishes which routines should be invoked on
+the client's behalf every time the parser reads in a start tag or an
+an end tag.
+
+How does the XML_Parser work in the sample code.  It's more complicated,
+but the idiomatic usage is the same.
+
+A typical RSS News Feed item looks something like this:
+
+  <item>
+	<title>France elects new President</title>
+	<link>http://www.nytimes.com/france-elects-new-president.html</link>
+  </item>
+
+We know to expect <item> before we see <title> and <link>, and we know we'll
+see <title> and <link> before we see </item>.  The element handler functions
+assumes something about the order in which tags and character data will be
+processed, and they manage to accumulate title and url information in 
+a struct called rssFeedEntry (which is one of many things passed in
+as user data, just after the parser is created.)
+
+When an item close tag is encountered, the callback routine assumes that
+the title and url fields of the user data structure have been populated,
+so it calls ParseArticle so that articles and words can be added to 
+the previously seen articles vector and the hashset of indices (also
+accessed though the user data).
+
+You'll need to add Semaphores and possibly so other items to the full
+user data structure.  Because you're going from sequential to
+concurrent, you'll need Semaphores to work as binary locks and to foster
+thread-to-thread communication.
+
+Feel free to send mail to the cs107@cs queue if you have more questions.
+You really don't need to understand all that much about the expat
+system to trust that it works.
+
+Thanks, and good luck with the assignment.

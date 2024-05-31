@@ -1,0 +1,21 @@
+BBC World News (World Front Page): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml
+BBC World News (UK): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/uk_news/rss.xml
+BBC World News (Americas): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/americas/rss.xml
+BBC Words News (Europe): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/europe/rss.xml
+BBC World News (Business): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/business/rss.xml
+BBC World news (Technology): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/technology/rss.xml
+BBC World News (Entertainment): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/entertainment/rss.xml
+Philadelphia Inquirer (News): http://www.philly.com/mld/philly/news/rss.xml
+Philadelphia Inquirer (Nation): http://www.philly.com/mld/philly/news/nation/rss.xml
+Philadelphia Inquirer (Politics): http://www.philly.com/mld/philly/news/politics/rss.xml
+Philadelphia Inquirer (Business): http://www.philly.com/mld/philly/business/rss.xml
+Philadelphia Inquirer (Weird): http://www.philly.com/mld/philly/news/weird_news/rss.xml
+Boston Globe (A to Z): http://www.boston.com/news/globe/a-z?mode=rss_10
+Boston Globe (Front Page): http://www.boston.com/news/globe/pageone?mode=rss_10
+Boston Globe (World): http://www.boston.com/news/globe/world?mode=rss_10
+Boston Globe (National): http://www.boston.com/news/globe/nation?mode=rss_10
+Boston Globe (Business): http://www.boston.com/news/globe/business?mode=rss_10
+Seattle Times (Top Stories): http://seattletimes.nwsource.com/rss/home.xml
+Seattle Times (Nation/World): http://seattletimes.nwsource.com/rss/nationworld.xml
+Seattle Times (Politics): http://seattletimes.nwsource.com/rss/politics.xml
+Seattle Times (Entire Site): http://seattletimes.nwsource.com/rss/seattletimes.xml

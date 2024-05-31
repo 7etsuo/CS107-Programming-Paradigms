@@ -1,0 +1,54 @@
+For those of you in need of a hash function for strings,
+you can use the following, which is lifted from a textbook
+we used to use in CS106A.  You'll need to modify it so that
+it can be used by a hashset to store C strings (or structs
+keyed on C strings).
+
+/** 
+ * StringHash                     
+ * ----------  
+ * This function adapted from Eric Roberts' "The Art and Science of C"
+ * It takes a string and uses it to derive a hash code, which   
+ * is an integer in the range [0, numBuckets).  The hash code is computed  
+ * using a method called "linear congruence."  A similar function using this     
+ * method is described on page 144 of Kernighan and Ritchie.  The choice of                                                     
+ * the value for the kHashMultiplier can have a significant effect on the                            
+ * performance of the algorithm, but not on its correctness.                                                    
+ * This hash function has the additional feature of being case-insensitive,  
+ * hashing "Peter Pawlowski" and "PETER PAWLOWSKI" to the same code.  
+ */  
+
+static const signed long kHashMultiplier = -1664117991L;
+static int StringHash(const char *s, int numBuckets)  
+{            
+  int i;
+  unsigned long hashcode = 0;
+  
+  for (i = 0; i < strlen(s); i++)  
+    hashcode = hashcode * kHashMultiplier + tolower(s[i]);  
+  
+  return hashcode % numBuckets;                                
+}
+
+This quarter, we're going with an industrial strength version that
+relies on the expat XML parser.  The expat parser is a stream-based
+parser than reads in XML files, invoking user-supplied callback
+functions every time is encounters a start tag (like <item> or
+<description>), and end tag (like </item> or </link>), or character
+data (which, of course, is the visible, readable content of an XML
+document or an HTML page.)
+
+I do virtually all of the XML parsing for you.
+
+You'll notice that the ProcessEndTag is the function that assumes
+an article title and url has been planted in the rssFeedItem struct
+(which is set as the user data for the entire parser) when it detects
+that a item close tag has been read.  In that one situation, ProcessEndTag
+calls the ParseArticle function, passing in the text that sits in
+((rssNewsItem *)userData)->title and ((rssNewsItem *) userData)->url.
+
+You're going to want to add stuff to the rssNewsItem struct--things like
+hashsets and vectors--so that your stop words set and your set of indices
+can be threaded through the expat parser and made available to your
+ParseArticle function.
+

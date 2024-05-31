@@ -1,0 +1,7 @@
+Here's an example of a simple C++ program which uses the
+STL vector template to read in an already sorted list
+of English words.  There's some string and ifstream
+functionality, but there's also some relevant vector
+template work that illustrates how push_back and
+operator[] work.  There's also some examples of how
+const works as well.

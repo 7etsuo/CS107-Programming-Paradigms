@@ -1,0 +1,12 @@
+BBC World News (World Front Page): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml
+BBC World News (UK): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/uk_news/rss.xml
+BBC World News (Americas): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/americas/rss.xml
+BBC Words News (Europe): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/europe/rss.xml
+BBC World News (Business): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/business/rss.xml
+BBC World news (Technology): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/technology/rss.xml
+BBC World News (Entertainment): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/entertainment/rss.xml
+Boston Globe (A to Z): http://www.boston.com/news/globe/a-z?mode=rss_10
+Boston Globe (Front Page): http://www.boston.com/news/globe/pageone?mode=rss_10
+Boston Globe (World): http://www.boston.com/news/globe/world?mode=rss_10
+Boston Globe (National): http://www.boston.com/news/globe/nation?mode=rss_10
+Boston Globe (Business): http://www.boston.com/news/globe/business?mode=rss_10

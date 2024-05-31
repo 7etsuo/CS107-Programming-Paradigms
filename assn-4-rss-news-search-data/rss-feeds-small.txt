@@ -1,0 +1,4 @@
+BBC World News (World Front Page): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml
+BBC World News (UK): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/uk_news/rss.xml
+BBC World News (Americas): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/americas/rss.xml
+BBC Words News (Europe): http://newsrss.bbc.co.uk/rss/newsonline_world_edition/europe/rss.xml

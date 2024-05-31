@@ -1,0 +1,66 @@
+HTTP/1.1 200 OK
+Server: Sun-ONE-Web-Server/6.1
+Date: Sun, 24 Apr 2005 16:43:54 GMT
+Content-length: 3602
+Content-type: text/xml
+Set-cookie: RMID=831809ce569d426bcccab532; expires=Monday, 24-Apr-2006 16:43:54 GMT; path=/; domain=.nytimes.com
+Last-modified: Sun, 24 Apr 2005 16:30:26 GMT
+Accept-ranges: bytes
+Connection: close
+
+<?xml version="1.0" encoding="iso-8859-1" ?>
+   <rss version="2.0">
+   <channel>
+          <title>NYT &gt; Home Page</title>
+                <link>http://www.nytimes.com/index.html?partner=rssnyt</link>
+                <description>New York Times > Breaking News, World News &#38; Multimedia</description>
+                <copyright>Copyright 2005 The New York Times Company</copyright>
+                <language>en-us</language>
+                <lastBuildDate>Sun, 24 Apr 2005 12:30:00 EDT</lastBuildDate>
+                <image>
+                        <url>http://www.nytimes.com/images/section/NytSectionHeader.gif</url>
+                        <title>NYT &gt; Home Page</title>
+                        <link>http://www.nytimes.com/index.html</link>
+                </image>
+                <item>
+                        <title>At Installation Mass, New Pope Strikes a Tone of Openness</title>
+                        <link>http://www.nytimes.com/2005/04/24/international/worldspecial2/24cnd-pope.html?ex=1271995200&#38;en=930aab5d3b06eeaa&#38;ei=5088&#38;partner=rssnyt&#38;emc=rss</link>
+                        <description>The Mass, which drew 350,000 spectators, marked an important moment in the transformation of Benedict XVI.</description>
+                        <author>By IAN FISHER and LAURIE GOODSTEIN</author>
+                        <pubDate>Sun, 24 Apr 2005 00:00:00 EDT</pubDate>
+                        <guid isPermaLink="false">http://www.nytimes.com/2005/04/24/international/worldspecial2/24cnd-pope.html</guid>
+                </item>
+                <item>
+                        <title>Acela, Built to Be Rail&#39;s Savior, Bedevils Amtrak at Every Turn</title>
+                        <link>http://www.nytimes.com/2005/04/24/national/24acela.html?ex=1271995200&#38;en=085fc28bf4e0387e&#38;ei=5088&#38;partner=rssnyt&#38;emc=rss</link>
+                        <description>Amtrak&#39;s Acela fast rail system has failed to be the financial savior once predicted, and instead has become a frustrating burden.</description>
+                        <author>By JAMES DAO</author>
+                        <pubDate>Sun, 24 Apr 2005 00:00:00 EDT</pubDate>
+                        <guid isPermaLink="false">http://www.nytimes.com/2005/04/24/national/24acela.html</guid>
+                </item>
+                <item>
+                        <title>Medicare Change Will Limit Access to Claim Hearing</title>
+                        <link>http://www.nytimes.com/2005/04/24/national/24medicare.html?ex=1271995200&#38;en=55ccdf4d960d46e5&#38;ei=5088&#38;partner=rssnyt&#38;emc=rss</link>
+                        <description>Medicare beneficiaries must now show special circumstances to appear in person before a judge when their claims are denied.</description>
+                        <author>By ROBERT PEAR</author>
+                        <pubDate>Sun, 24 Apr 2005 00:00:00 EDT</pubDate>
+                        <guid isPermaLink="false">http://www.nytimes.com/2005/04/24/national/24medicare.html</guid>
+                </item>
+                <item>
+                        <title>Sousa? Many Students March to Mariachi Instead</title>
+                        <link>http://www.nytimes.com/2005/04/24/national/24mariachi.html?ex=1271995200&#38;en=1c98e2ea48cca043&#38;ei=5088&#38;partner=rssnyt&#38;emc=rss</link>
+                        <description>There is a spirited and growing movement to bring the centuries-old Mexican musical tradition of mariachi to public schools.</description>
+                        <author>By PATRICIA LEIGH BROWN</author>
+                        <pubDate>Sun, 24 Apr 2005 00:00:00 EDT</pubDate>
+                        <guid isPermaLink="false">http://www.nytimes.com/2005/04/24/national/24mariachi.html</guid>
+                </item>
+                <item>
+                        <title>Many Say End of Firearm Ban Changed Little</title>
+                        <link>http://www.nytimes.com/2005/04/24/national/24guns.html?ex=1271995200&#38;en=9f30d7d704da2578&#38;ei=5088&#38;partner=rssnyt&#38;emc=rss</link>
+                        <description>The expiration of the assault weapons ban last September has not set off a sustained surge in the weapons&#39; sales, gun sellers say.</description>
+                        <author>By DEBORAH SONTAG</author>
+                        <pubDate>Sun, 24 Apr 2005 00:00:00 EDT</pubDate>
+                        <guid isPermaLink="false">http://www.nytimes.com/2005/04/24/national/24guns.html</guid>
+                </item>
+        </channel>
+</rss>

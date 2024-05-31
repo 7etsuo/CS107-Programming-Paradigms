@@ -1,0 +1,8 @@
+Welcome to the CS107 RSS Search Engine!
+
+
+This handy tool pulls and processes a huge number of RSS (Rich Site Summary) pages, 
+and then allows for a simple search of those documents.  Currently, the application
+operates as a singly threaded application where all feeds are processed sequentially.
+In practice, each one of the feeds would be downloaded in its own thread, as would
+each of the news articles identified by the feeds.

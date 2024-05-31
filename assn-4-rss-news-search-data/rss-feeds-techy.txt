@@ -1,0 +1,3 @@
+Slashdot: http://rss.slashdot.org/Slashdot/slashdot
+Techdirt: http://www.techdirt.com/techdirt_rss.xml
+Wired: http://www.wired.com/news/feeds/rss2/0,2610,,00.xml
